@@ -10,23 +10,22 @@
 .social-cards>ul>li {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid #dadada;
   background-color: var(--background-color);
-  max-height: 700px;
-  overflow: hidden;
+  max-height: 403px;
 }
 
 .social-cards .social-cards-card-body {
   margin: 32px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 
 
-.social-cards .button-container {
-  margin-top: auto;
+.social-cards .social-card-text {
+  max-height: 72px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .social-cards .social-cards-card-image {
@@ -37,4 +36,5 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  max-height: 200px;
 }
