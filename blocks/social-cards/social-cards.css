@@ -1,4 +1,4 @@
-.cards>ul {
+.social-cards>ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,31 +7,33 @@
   grid-gap: 32px;
 }
 
-.cards>ul>li {
+.social-cards>ul>li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #dadada;
   background-color: var(--background-color);
+  max-height: 700px;
+  overflow: hidden;
 }
 
-.cards .cards-card-body {
+.social-cards .social-cards-card-body {
+  margin: 32px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 32px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
 }
 
 
-.cards .button-container {
+.social-cards .button-container {
   margin-top: auto;
 }
 
-.cards>ul>li img {
+.social-cards .social-cards-card-image {
+  line-height: 0;
+}
+
+.social-cards>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
