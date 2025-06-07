@@ -15,4 +15,24 @@ export default function decorate(block) {
       }
     });
   });
+
+  // Move 'dark-banner' class to parent element
+  if (block.classList.contains('dark-banner')) {
+    block.classList.remove('dark-banner');
+    block.parentElement?.parentElement.classList.add('dark-banner');
+    block.parentElement?.parentElement?.classList.add('dark-banner');
+  } else if (block.classList.contains('pink-banner')) {
+    block.classList.remove('pink-banner');
+    block.parentElement?.parentElement.classList.add('pink-banner');
+    block.parentElement?.parentElement.classList.add('pink-banner');
+  }
+
+  // Move 'dark-banner' class to parent element
+  if (block.classList.contains('transparent-button')) {
+    const btns = block.querySelectorAll('.button');
+    btns.forEach((btn) => btn.classList.add('white-btn-text'));
+  } else if (block.classList.contains('dark-button')) {
+    const btns = block.querySelectorAll('.button');
+    btns.forEach((btn) => btn.classList.add('dark-button'));
+  }
 }

@@ -11,6 +11,13 @@
  */
 
 :root {
+
+  /* NSW Project Styles */
+  --nsw-brand-dark: #630019;
+  --nsw-brand-light: #ffe6ea;
+  --nsw-brand-supplementary: #495054;
+  --nsw-brand-accent: #d7153a;
+
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
@@ -53,7 +60,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     /* body sizes */
     --body-font-size-m: 18px;
@@ -112,12 +119,29 @@ h6 {
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -142,7 +166,7 @@ pre {
   white-space: pre;
 }
 
-main > div {
+main>div {
   margin: 40px 16px;
 }
 
@@ -181,7 +205,7 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: var(--nsw-brand-dark);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
@@ -207,7 +231,8 @@ a.button.secondary,
 button.secondary {
   background-color: unset;
   border: 2px solid currentcolor;
-  color: var(--text-color);
+  color: var(--background-color);
+  /* color: var(--text-color); */
 }
 
 main img {
@@ -228,22 +253,34 @@ main img {
 }
 
 /* sections */
-main > .section {
+main>.section {
   margin: 40px 0;
 }
 
-main > .section > div {
+main>.section>div {
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
 }
 
-main > .section:first-of-type {
+main>.section:first-of-type {
+  margin-top: 0;
+}
+main>.section:nth-of-type(4) {
+  margin-bottom: 0;
+}
+
+main>.section:nth-of-type(5) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main>.section:nth-of-type(6) {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
+@media (width >=900px) {
+  main>.section>div {
     padding: 0 32px;
   }
 }

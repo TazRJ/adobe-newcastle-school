@@ -12,7 +12,15 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #dadada;
-  background-color: var(--background-color);
+
+  &.dark-card {
+    background-color: var(--nsw-brand-dark);
+    color: white;
+  }
+
+  &.light-pink-card {
+    background-color: var(--nsw-brand-light); // Make sure this variable is defined
+  }
 }
 
 .cards .cards-card-body {
@@ -26,7 +34,6 @@
   line-height: 0;
 }
 
-
 .cards .button-container {
   margin-top: auto;
 }
@@ -36,3 +43,7 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.dark-card {}
+
+.white-text {}
