@@ -6,14 +6,10 @@
 .hero {
   position: relative;
   padding: 40px 24px;
-  min-height: 300px;
-}
-
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  min-height: 450px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .hero picture {
@@ -30,7 +26,19 @@
   height: 100%;
 }
 
-@media (width >= 900px) {
+
+.hero-banner-wrapper {
+  background-color: white;
+  padding: 32px;
+  width: 550px;
+  max-height: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  margin-right: 250px;
+}
+
+
+@media (width >=900px) {
   .hero {
     padding: 40px 32px;
   }
